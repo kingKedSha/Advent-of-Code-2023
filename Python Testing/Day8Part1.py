@@ -4,9 +4,8 @@ lines = lines[2:]
 names = [i[:3] for i in lines]
 print(names)
 leftright = [[i[7:10], i[12:15]] for i in lines]
-currpos = names.index('XDA')
+currpos = names.index('AAA')
 total = 0
-foundit = False
 for i in range(len(directions)):
     thing = directions[i]
     if thing == 'L':
