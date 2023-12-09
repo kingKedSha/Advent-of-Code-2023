@@ -9,8 +9,7 @@ for line in lines:
         rows.append([])
         for i in range(len(rows[-2])-1):
             rows[-1].append(rows[-2][i+1] - rows[-2][i])
-        if all(i == 0 for i in rows[-1]):
-            foundzero = True
+        foundzero = all(i == 0 for i in rows[-1])
     for i in range(len(rows)-2, -1, -1):
         rows[i].append(rows[i][-1] + rows[i+1][-1])
     total += rows[0][-1]
