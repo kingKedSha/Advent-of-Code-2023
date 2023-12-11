@@ -1,4 +1,4 @@
-lines = open("Day4Input.txt").read().split("\n")
+lines = open("Day04Input.txt").read().split("\n")
 total = 0
 for line in lines:
     win = line.split("|")[0].split(":")[1].split(" ")
