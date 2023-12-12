@@ -3,21 +3,17 @@ lines = [[char for char in i] for i in lines]
 index = 0
 while index < len(lines):
     if all(char == '.' for char in lines[index]):
-        lines.insert(index+1, lines[index])
+        lines.insert(index, lines[index])
         index += 1
     index += 1
 lines = list(map(list, zip(*lines)))
 index = 0
 while index < len(lines):
     if all(char == '.' for char in lines[index]):
-        lines.insert(index+1, lines[index])
+        lines.insert(index, lines[index])
         index += 1
     index += 1
-points = []
-for i in range(len(lines)):
-    for j in range(len(lines[i])):
-        if lines[i][j] == '#':
-            points.append([i, j])
+points = [[i, j] for i in range(len(lines)) for j in range(len(lines[i])) if lines[i][j] == '#']
 total = 0
 for i in range(len(points)):
     for j in range(i+1, len(points), 1):
