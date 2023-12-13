@@ -1,4 +1,4 @@
-lines = open("Day4Input.txt").read().split("\n")
+lines = open("Day04Input.txt").read().split("\n")
 cardnums = [1] * len(lines)
 for i in range(len(lines)):
     line = lines[i]
