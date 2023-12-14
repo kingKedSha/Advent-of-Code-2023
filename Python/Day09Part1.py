@@ -1,4 +1,4 @@
-lines = open("Day9Input.txt").read().split("\n")
+lines = open("Day09Input.txt").read().split("\n")
 lines = [i.split(" ") for i in lines]
 lines = [[int(j) for j in i] for i in lines]
 total = 0
@@ -11,4 +11,4 @@ for line in lines:
     for i in range(len(rows)-2, -1, -1):
         rows[i].append(rows[i][-1] + rows[i+1][-1])
     total += rows[0][-1]
-print(total)
+print(f"{total:,}")

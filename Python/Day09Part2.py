@@ -1,4 +1,4 @@
-lines = open("Day9Input.txt").read().split("\n")
+lines = open("Day09Input.txt").read().split("\n")
 lines = [i.split(" ")[::-1] for i in lines]
 lines = [[int(j) for j in i] for i in lines]
 total = 0
